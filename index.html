@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Banyuan Club</title>
+
+		<link rel="stylesheet" href="reveal/dist/reveal.css">
+		<link rel="stylesheet" href="reveal/dist/theme/white.css" id="theme">
+
+        <link rel="stylesheet" href="reveal/plugin/highlight/monokai.css">
+        <link rel="stylesheet" href="index.css">
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <section id="markdown" data-markdown="markdown.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+
+                <section data-markdown data-separator="---">
+                    <script type="text/template">
+                        ## Common Footer
+                        公共结尾？
+                    </script>
+                </section>
+            </div>
+		</div>
+        <script>
+            var search = window.location.search
+            var query = search.slice(1).split('&');
+            for (var i=0; i<query.length; i++) {
+                var pairs =query[i].split('=');
+                if (pairs[0] === 'f') {
+                    var filename = pairs[1].replace(/<>/, '');
+                    if (!filename.match(/\.md$/)) filename += '.md';
+                    document.getElementById('markdown').dataset.markdown = filename;
+                }
+            }
+        </script>
+
+		<script src="reveal/dist/reveal.js"></script>
+        <script src="reveal/plugin/markdown/markdown.js"></script>
+        <script src="reveal/plugin/highlight/highlight.js"></script>
+        <script src="reveal/plugin/notes/notes.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+
+		</script>
+
+	</body>
+</html>

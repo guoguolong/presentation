@@ -1,0 +1,14 @@
+body {
+    background: #111;
+    color: white;
+}
+.reveal {
+    color: white;
+}
+.reveal .slide-background-content {
+    background: #111;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+    color: white;
+}
